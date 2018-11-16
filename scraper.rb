@@ -2,8 +2,7 @@ require 'httparty'
 require 'nokogiri'
 
 class Scraper
-  URL = "https://blockwork.cc"
-  PAGINATE = "listings?page"
+  URL = "https://example.com"
   JOBS = []
 
   def get_all_data
@@ -35,7 +34,7 @@ class Scraper
   end
 
   def handle_pagination(num)
-    url = "#{URL}/#{PAGINATE}=#{num}"
+    url = "#{URL}/listings?page=#{num}"
     jobs = scrape_page(url).css('div.listingCard')
     build_jobs(jobs)
   end
