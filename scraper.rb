@@ -102,7 +102,7 @@ class Scraper
 
   def format_result(page_item)
     @options[:targets].each_with_object({}) do |t, obj|
-      next obj[t[:key]] = get_href_value(page_item, t) if t[:type] == :href
+      next obj[t[:key]] = get_href_value(page_item) if t[:type] == :href
 
       type = set_attribute_type(t[:type])
       value = [t[:element], type, t[:name]]
