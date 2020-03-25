@@ -31,7 +31,7 @@ class Scraper
   end
 
   # This method will trigger our paginated scraper. It will get the first page result,
-  # And use the specified parent element, identifier and attribute type to set the total page count
+  # And use the specified parent element, identifier and attribute type to set the per page/ last page values if necessary.
   # and the last page for our options. Then we will trigger our paginated get with this new information.
   #
   # @param element [String] the HTML element for the recurring parent element on the page
